@@ -1,0 +1,57 @@
+<main id="summaryPage">
+    <div id="warnings" *ngIf="warnings === true">
+        <p>Warning: Exclusive locks on table master.address_ny</p>
+    </div>
+    <div class="topRow">
+        <div class="topBox">
+            <div>
+                <h3>Data Version</h3>
+                <p>{{dataVersion}}</p>
+            </div>
+            <div>
+                <h3>State</h3>
+                <p>{{progress}}</p>
+            </div>
+            <div>
+                <h3>Start Date</h3>
+                <p>{{startDate}}</p>
+            </div>
+            <div>
+                <h3>Release Date</h3>
+                <p>{{releaseDate}}</p>
+            </div>
+        </div>
+        <div class="topBoxRight">
+            <div>
+                <h3>Dataflow server:</h3>
+                <p>{{dataStatues}}</p>
+            </div>
+            <div>
+                <h3>Jobs in progress</h3>
+                <p>{{jobProgress}}</p>
+            </div>
+            <div>
+                <h3>CPU time</h3>
+                <p>{{cpuTime}}</p>
+            </div>
+        </div>
+    </div>
+    <div id="line"></div>
+    <div class="bottomRow">
+        <div class="leftBox">
+            <div id="metersTable" *ngFor='let key of meters'>
+                <ul>
+                    <li>meters <span class="meter">{{key}}</span></li>
+                </ul>
+            </div>
+            <a id="qualityLink" (click)="showQuality()">Quality</a>
+            <div *ngIf="quality === true">
+                <p>Here would be the awesome quality! (or it could open a new window)</p>
+            </div>
+        </div>
+        <div class="middleDiv">
+            <h2>{{buildingsNumber}}</h2>
+            <p>buildings</p>
+        </div>
+    </div>
+</main>

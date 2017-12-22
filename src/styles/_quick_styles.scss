@@ -1,0 +1,32 @@
+#summaryPage {
+    display: flex;
+    flex-direction: column;
+    #warnings {
+        background-color: #E8BF56;
+        color: #FFF;
+    }
+    .topRow {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10%;
+    }
+    .topBox, .topBoxRight {
+        border: 1px solid $mapfit-blue;
+        width: 40%;
+    }
+    #line {
+        height: 1px;
+        width: 100%;
+        background-color: #979797;
+    }
+    #qualityLink {
+        color: blue;
+        text-decoration: underline;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .bottomRow {
+        display: flex;
+    }
+}
